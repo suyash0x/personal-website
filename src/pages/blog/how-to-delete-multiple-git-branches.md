@@ -1,10 +1,11 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
 title: "How to delete multiple git branches?"
-pubDate: 2022-07-01
-description: "This is the first post of my new Astro blog."
-author: "suyash0x"
-tags: ["astro", "blogging", "learning in public"]
+pubDate: 2023-10-01
+description: "Take control of your Git branches. Keep your workspace clean, your operations fast, and your team in sync using tools like git grep and xargs"
+author: "suyashdev"
+tags: ["grep", "git", "xrags"]
+metaTagDescription: "Efficiently manage your Git repository by learning how to clean up multiple inactive branches. Discover a CLI solution that saves time and effort, making your development workflow more organized and efficient. Suyashdev guides you through using powerful tools like grep and xargs to streamline the branch deletion process and improve your Git repository's performance."
 ---
 
 Efficient Git repository management involves not just creating but also cleaning up local branches. Over time, as developers create branches for various tasks, some become obsolete. Inactive branches clutter the repository, making it harder to navigate and potentially slowing down Git operations. Deleting these inactive branches streamlines the repository, improving its performance and maintainability. It's like decluttering your workspace for a more efficient and organized workflow.
