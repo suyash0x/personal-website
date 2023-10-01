@@ -1,0 +1,87 @@
+---
+import "@fontsource-variable/jetbrains-mono";
+import Navbar from "../components/Navbar.astro";
+const { frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <main>
+      <Navbar />
+      <h1>{frontmatter.title}</h1>
+      <p>by {frontmatter.author}</p>
+      {
+        frontmatter.image && (
+          <section class="main-image">
+            <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+          </section>
+        )
+      }
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  html {
+    width: 100%;
+    background: #161618;
+    color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+    font-family: "JetBrains Mono Variable", sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    max-width: 60%;
+    @media only screen and (max-width: 720px) {
+      max-width: 90%;
+    }
+  }
+
+  h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1px;
+  }
+
+  code {
+    background-color: #b48aeb1f;
+    padding: 2.5px;
+  }
+
+  pre {
+    background-color: #b48aeb1f !important;
+    padding: 16px;
+  }
+
+  pre > code {
+    background-color: unset;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .main-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
